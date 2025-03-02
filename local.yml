@@ -1,0 +1,16 @@
+---
+# Vishakh's ansible setup script
+# local.yml is used for pull-based Ansible setup.
+
+- hosts: localhost 
+  user: root
+  
+  tasks:
+
+    - name: Install a list of packages
+      apt:
+        pkg:
+          - python3
+          - curl
+          - wget
+
